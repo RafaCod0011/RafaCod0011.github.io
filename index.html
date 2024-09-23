@@ -3,14 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Integrador</title>
+    <title>LoboFilm - Productora de Audiovisuales</title>
+    <link rel="stylesheet" href="indexstyles.css">
+
 </head>
 <body>
-    <h1>Integrador Grupal</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus sequi nesciunt, saepe magni exercitationem temporibus fuga, autem eveniet molestias placeat asperiores delectus, consequatur dolorum? Minima culpa molestiae nihil sint beatae?</p>
+    <main>
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="fotografia.html">FOTOGRAFÍA</a></li>
+                    <li><a href="videos.html">VIDEOS</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                </ul>
+            </div>
+            <div class="redes">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="/images/instagram-svgrepo-com.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="/images/facebook-svgrepo-com.png" alt="Facebook">
+                </a>       
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="/images/youtube-svgrepo-com.png" alt="YouTube">
+                </a> 
+            </div>  
+        </nav>
+    </main>
+
+    <div class="logoempresa">
+        <img class="logoempresa-image" alt="LoboFilm" src="images/back2.jpeg">
+        <div class="logoempresaText">
+            <h2 class="logoempresaText-titulo">LoboFilm</h2>
+            <h2 class="logoempresaText-subtitulo ">Productora audiovisual</h2>
+        </div>
+    </div>
 
 
-    <h2>Edit 2</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, distinctio.</p>
+    <section id="nosotros">
+        <h2 style="color: black;">SE PODRIA PONER ALGUNA COSITA POR ACA</h2>
+        <p>LoboFilm</p>
+    </section>
+
+    <section id="servicios">
+
+        <div class="servicios-item">
+            <img src="/images/backstage/Back1_gris.jpg" alt="photo1">
+            <h3 style="color: #3986b6;">COMPROMISO</h3>
+            <p> Dedicado a la fotografía, vídeo y edición de material audiovisual variado.
+                Este es un medio de comunicar diferente, dónde todo pasa a través de los ojos y cada momento queda plasmado para terminar siendo único.
+                La fotografía social, retratos, animales, moda, egresados y música, son algunas de las temáticas a las que nos orientamos.
+                Estamos equipados para darte la mejor calidad, y tenemos la experiencia para plasmar tus ideas o desarrollar juntos un trabajo creativo.</p>
+        </div>
+        <div class="servicios-item">
+            <h3 style="color: #3986b6;">PONER ALGO</h3>
+            <p> En este parrafo podriamos detallar los servicios que hace la empresa.
+                por ejemplo las fotos para las promos y todas las cuestiones
+                hay que meterle texto<br><br><br>
+            </p>
+            <img src="/images/backstage/Back3_gris.jpg" alt="photo1">
+        </div>
+        <div class="servicios-item">
+            <img src="/images/backstage/Back1_gris.jpg" alt="photo1">
+            <h3 style="color: #3986b6;">COMPROMISO</h3>
+            <p> Dedicado a la fotografía, vídeo y edición de material audiovisual variado.
+                Este es un medio de comunicar diferente, dónde todo pasa a través de los ojos y cada momento queda plasmado para terminar siendo único.
+                La fotografía social, retratos, animales, moda, egresados y música, son algunas de las temáticas a las que nos orientamos.
+                Estamos equipados para darte la mejor calidad, y tenemos la experiencia para plasmar tus ideas o desarrollar juntos un trabajo creativo.</p>
+        </div>
+
+     </section>
+
+    <section id="datos">
+        <img src="/images/Logo/logo2.jpg" alt="logo2" id="logo">
+        <h2 style="color: black;">Contacto</h2>
+        <p>Dirección: Avda. Eva Perón 1558</p>
+        <p>Teléfono: (0266)-15202020</p>
+        <p>Email: ivanlik@gmail.com</p>
+    </section>
+   
+ <!-- .logoempresa -->
+
+        <br><br><br>    
+        <hr>
+        <div class="presentacion">
+            <h1 id="contacto" class="nosotros">CONTACTATE CON NOSOTROS</h1>
+            <hr>
+            <br>
+        </div>    
+        
+        <div class="contacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="tbNombre" name="tbNombre"><br><br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="tbApellido" name="tbApellido"><br><br>
+            <label for="email">Mail:</label>
+            <input type="email" id="tbMail" name="tbMail"><br><br>
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="cbSexo">
+                <option value="masc">Masculino</option>
+                <option value="feme">Femenino</option>
+                <option value="inde">Indefinido</option>
+            </select><br><br> 
+            <label for="fechanacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="tbFechaNacimiento" name="tbFechaNacimiento"><br><br>
+            <label for="enviar"></label>
+            <input type="submit" id="btEnviar" name="btEnviar"><br><br>
+
+        </div>
 </body>
+<footer>
+    <br><br>
+    <p>© 2024 Mi Empresa</p>
+</footer>
 </html>

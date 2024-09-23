@@ -1,0 +1,300 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+*{
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: "Inria Sans", sans-serif;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+main {
+    background-color: rgb(3, 7, 48);
+    padding-top: 50px;
+}
+
+h1{
+    color: aliceblue;
+    text-align: center;
+    font-weight: 600;
+    font-size: x-large;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+
+/* ------------------ NAV BAR --------------------- */
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    height: 60px; /* Alto NAVBAR*/
+}
+
+nav img {
+    width: 24px;
+    height: 24px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100%; 
+}
+
+ul li {
+    height: 100%; /* Para ocupar toda la altura del NAVBAR*/
+    display: flex;
+    align-items: center;
+}
+
+ul li a {
+    display: block;
+    padding: 0 15px;
+    height: 100%; /* Ocupa toda la altura del li */
+    line-height: 60px; /* Alinea verticalmente el texto */
+    text-decoration: none;
+    color: #3986b6;
+    transition: background-color 0.3s ease;
+}
+
+ul li.right {
+    margin-left: auto; /* Redes a la derecha*/
+}
+
+
+a {
+    display: block;
+    padding: 8px;
+    font-family: "Inria Sans", sans-serif;
+    font-size: 16px; 
+    text-decoration: none;
+}
+
+/* Efecto al pasar el mouse por arriba*/
+
+ul li a:hover {
+    background-color:#46a2db; 
+    color: white;
+}
+
+
+.redes {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    height: 100%;
+}
+
+.redes a {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 0 10px; 
+    height: 100%; 
+    transition: background-color 0.3s ease;
+}
+
+.redes a:hover {
+    background-color:#46a2db; 
+    margin: 0;
+}
+
+
+
+
+/* -------------------- Estilo para el logo de la empresa -------------------*/
+
+
+.logoempresa {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* ALTO DE LA PANTALLA */
+    overflow: hidden;
+}
+
+.logoempresa-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*CUBRIR TODO EL CONTENEDOR*/
+}
+
+.logoempresaText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*centrado  horizontal y vertical*/
+    text-align: center;
+    color: white; 
+}
+
+.logoempresaText-titulo {
+    font-family: Roboto;
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.logoempresaText-subtitulo {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+/* ---------------------- Acerca de Nosotros ------------------- */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#nosotros {
+    text-align: center;
+
+}
+
+#servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.servicios-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#datos {
+    text-align: center;
+    padding: 20px;
+}
+
+#logo {
+    display: block; 
+    margin: 0 auto; 
+    max-width: 100%;
+    height: auto; 
+    width: 150px; 
+}
+
+
+
+
+/* --------------------ACERCA DE-------------------- */
+
+
+.container {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+    min-height: 300px; 
+    padding: 20px;
+}
+
+.container:hover {
+    background-position: left;
+    cursor: pointer;
+}
+
+h1.acercade{
+    color:mediumblue;
+    text-align: center;
+    font-weight: 900;
+    font-size:x-large
+}
+
+h2.somos {
+    text-align: center;
+    color: white;
+    font-weight: 200;
+}
+
+.image img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 10px;
+}
+/* ---------------- PARA EL FORMUALRIO DE CONTACTO --------------- */
+
+div.contacto {
+    background-color: #FFD7C4;
+    padding: 25px;
+    border: 3px solid #7695FF;
+    border-radius: 1em;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /*float: right;*/
+    margin:0 auto;
+    
+}
+
+label {
+    font-family: "Inria Sans", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input[type="text"], input[type="email"], input[type="date"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: regular;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    
+    background-color: #9DBDFF;
+    color: whitesmoke;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-family: "Inria Sans", sans-serif;
+    font-weight:bold;
+    font-size: 20px;
+}
+
+input[type="submit"]:hover {
+    /* background-color: #FF9874; */
+    background-color: rgb(32, 182, 32);
+    color: rgb(255, 255, 255);
+}
+
+footer{
+    background-color: #000000;
+    color: #3986b6;
+}
