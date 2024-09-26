@@ -238,6 +238,63 @@ h2.somos {
     height: auto; 
     border-radius: 10px;
 }
+
+
+/* Formato para el sector de NOSOTROS*/
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#nosotros {
+    text-align: center;
+
+}
+
+#servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.servicios-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.servicios-item img {
+    /*width: 100%; */
+    /*height: auto; */
+    max-width: 300px;
+    object-fit: cover; 
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+#datos {
+    text-align: center;
+    padding: 20px;
+}
+
+#logo {
+    display: block; 
+    margin: 0 auto; 
+    max-width: 100%;
+    height: auto; 
+    width: 150px; 
+}
+
+
+
+
+
+
+
 /* ---------------- PARA EL FORMUALRIO DE CONTACTO --------------- */
 
 div.contacto {
