@@ -298,3 +298,43 @@ footer{
     background-color: #000000;
     color: #3986b6;
 }
+
+
+/* ESTILO PARA LA PAGINA DE FOTOS*/
+ /* Estilo del Slide FOTOS*/
+
+ .contenedor-slider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.icono-derecha, .icono-izquierda{
+    width:50px;
+    height:50px;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.icono-derecha {
+    right: 10px;
+}
+
+.icono-izquierda {
+    left: 10px;
+}
+
+.icono-derecha img, .icono-izquierda img {
+    width: 100%;
+    height: auto;
+}
+
+    .Imagenes img {
+    max-width: 100%;
+    display: block;
+}
