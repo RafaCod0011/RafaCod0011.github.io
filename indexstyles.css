@@ -161,6 +161,7 @@ ul li a:hover {
 }
 
 /* ---------------------- Acerca de Nosotros ------------------- */
+
 section {
     margin: 20px 0;
     padding: 20px;
@@ -241,6 +242,7 @@ h2.somos {
 
 
 /* Formato para el sector de NOSOTROS*/
+
 section {
     margin: 20px 0;
     padding: 20px;
@@ -289,67 +291,115 @@ section {
     width: 150px; 
 }
 
-
-
-
-
-
-
 /* ---------------- PARA EL FORMUALRIO DE CONTACTO --------------- */
 
-div.contacto {
-    background-color: #FFD7C4;
-    padding: 25px;
-    border: 3px solid #7695FF;
-    border-radius: 1em;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 400px;
-    text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /*float: right;*/
-    margin:0 auto;
-    
+
+.presentacion {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
 }
+
+.nosotros {
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+form {
+   margin-top: 100px;
+   margin-bottom: 100px;
+   margin-left: 250px;
+   border-radius: 10px;
+   box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+   width: 800px;
+   padding: 20px;
+   height: 500px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.formulario {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+}
+
+.campos {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+   color: black;   
+   /* background-color:rgb(255, 13, 13); */
+   margin-left: 80px;
+}
+
+.form-group {
+   display: flex;
+   align-items: center;
+   justify-content: left;
+   padding: 10px;
+}
+
+.imagen {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   max-width: 280px;
+   overflow: hidden;
+}
+
+.imagen img {
+   width: 100%;
+   height: auto;
+}
+
+
 
 label {
-    font-family: "Inria Sans", sans-serif;
-    font-weight: bold;
-    font-size: 18px;
+   width: 140px;
+   margin-right: 2px;
+   font-weight: bold;
+   font-size: 18px;
 }
 
-input[type="text"], input[type="email"], input[type="date"], select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-family: "Inria Sans", sans-serif;
-    font-weight: regular;
-    font-size: 14px;
+input[type="text"], [type="email"], select, [type="datetime-local"] {
+   background-color: rgb(255, 255, 255);
+   border-radius: 5px;
+   color:rgb(0, 0, 0);
+   font-size: 16px;
+   border-style: double;
+   outline: none;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, select,[type="datetime-local"]:focus {
+   border-color: rgb(255, 255, 255); /* Cambia el color del borde al hacer clic */
 }
 
 input[type="submit"] {
-    
-    background-color: #9DBDFF;
-    color: whitesmoke;
-    padding: 10px 50px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 100%;
-    font-family: "Inria Sans", sans-serif;
-    font-weight:bold;
-    font-size: 20px;
+   width: 100%;
+   background-color: #ffffff;
+   color: rgb(0, 0, 0);
+   font-size: 18px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: left;
+   padding: 10px;
 }
 
 input[type="submit"]:hover {
-    /* background-color: #FF9874; */
-    background-color: rgb(32, 182, 32);
-    color: rgb(255, 255, 255);
+   background-color:#46a2db;
+   color: rgb(255, 255, 255);
 }
+
+
+/*----------------------------------------------------------------------------- */
+
 
 footer{
     background-color: #000000;

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoboFilm - Productora de Audiovisuales</title>
+    <link rel="stylesheet" href="indexstyles.css">
+
+</head>
+<body>
+
+    <main>
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="fotografia.html">FOTOGRAFIA</a></li>
+                    <li><a href="videos.html">VIDEOS</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+            </div>
+            <div class="redes">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="/images/instagram-svgrepo-com.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="/images/facebook-svgrepo-com.png" alt="Facebook">
+                </a>       
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="/images/youtube-svgrepo-com.png" alt="YouTube">
+                </a> 
+            </div>  
+        </nav>
+    </main>
+
+    <div class="presentacion">
+        <h1 id="contacto" class="nosotros">CONTACTATE CON NOSOTROS</h1>
+        
+    </div>    
+    
+    <form>
+        <div class="formulario">
+            <div class="campos">
+                <div class="form-group">
+                    <label for="nombre">NOMBRE:</label>
+                    <input type="text" id="nombre" name="nick">
+                </div>
+                <div class="form-group">
+                    <label for="apellido">APELLIDO:</label>
+                    <input type="text" id="apellido" name="subname">
+                </div>
+                <div class="form-group">
+                    <label for="mail">MAIL:</label>
+                    <input type="email" id="mail" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="sex">SEXO:</label>
+                    <select id="sex" name="sexo">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fecha">NACIMIENTO:</label>
+                    <input type="datetime-local" id="fecha" name="fecha">
+                </div>
+                
+                <div >
+                    <input type="submit" name="enviar" id="enviar">
+                </div>
+
+            </div>
+            <div class="imagen">
+                <img src="./images/Backstage/Back3_gris2.jpg" alt="Descripción de la imagen">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
