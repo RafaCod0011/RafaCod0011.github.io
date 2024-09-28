@@ -42,8 +42,11 @@
 
 
     <section id="nosotros">
-        <h2 style="color: black;">SE PODRIA PONER ALGUNA COSITA POR ACA</h2>
-        <p>LoboFilm</p>
+        <h2 style="color: rgb(50, 140, 182);">ACERCA DE NOSOTROS</h2>
+        <p> Dedicado a la fotografía, vídeo y edición de material audiovisual variado.
+            LoboFilm, es un medio de comunicar diferente. Somos una empresa dedicada y enfocada a caminar tu camino.
+            La fotografía social, retratos, animales, moda, egresados y música, son algunas de las temáticas a las que nos orientamos.
+            Estamos equipados para darte la mejor calidad, y tenemos la experiencia para plasmar tus ideas, o desarrollar juntos un trabajo creativo.</p>
     </section>
 
     <section id="servicios">
@@ -51,7 +54,7 @@
         <div class="servicios-item">
             <img src="/images/backstage/Back5.jpg" alt="photo1">
             <h3 style="color: #3986b6;">COMPROMISO</h3>
-            <p> Dedicado a la fotografía, vídeo y edición de material audiovisual variado.
+            <p> Dedicado a la fotografía, vídeo y edición de material audiovisual variado,.
                 Este es un medio de comunicar diferente, dónde todo pasa a través de los ojos y cada momento queda plasmado para terminar siendo único.
                 La fotografía social, retratos, animales, moda, egresados y música, son algunas de las temáticas a las que nos orientamos.
                 Estamos equipados para darte la mejor calidad, y tenemos la experiencia para plasmar tus ideas o desarrollar juntos un trabajo creativo.</p>
@@ -76,9 +79,75 @@
 
      </section>
 
+     <div class="fotografia">
+        <img src="/images/Logo/logo2.jpg" alt="logo2" id="logo">
+        <h1 id="videos" class="nosotros" style="color: #3986b6;" backcolor="black"; >FOTOGRAFIA PROFESIONAL</h1>
+        <h2 style="color: black;">Estamos equipados para darle la mejor calidad a tus videos, con la mejor tecnología, y un grupo de trabajo técnico especializado </h2>
+        <div class="contenedor-slider">
+            <div class="icono-izquierda">
+                <img src="/images/Flechas/left_arrow.png" alt="">
+            </div>
+            <div class="Imagenes">
+                <img name="imagenSlide" src="images/Promo/p1.jpg">       
+            </div>    
+            <div class="icono-derecha">
+                <img src="/images/flechas/right_arrow.png" alt="">
+            </div>
+
+        </div>    
+    </div>
+
+    <script>
+        
+        var imagenes=["images/Promo/p1.jpg",
+            "images/Promo/p2.jpg",
+            "images/Promo/p3.jpg",
+            "images/Promo/p4.jpg",
+            "images/Promo/p5.jpg",
+            "images/Promo/p6.jpg",
+            "images/Promo/p7.jpg",
+            "images/Promo/p8.jpg",
+            "images/Promo/p9.jpg",
+            "images/Promo/p10.jpg",
+        ];
+
+        var imgElement = document.querySelector('.Imagenes img');
+        
+        var contador=0;
+        function MoverDerecha()
+            {
+            contador++;
+
+            if (contador>imagenes.length-1)
+                {
+                    contador=0;
+                }
+                imgElement.src = imagenes[contador];
+            }
+
+        function MoverIzquierda()
+            {
+            contador--;
+            
+            if (contador<0)
+                {
+                    contador= imagenes.length-1;
+                }
+                imgElement.src = imagenes[contador];
+            }
+
+        var botonDerecha = document.querySelector(".icono-derecha");
+        var botonIzquierda= document.querySelector(".icono-izquierda");
+        
+        botonDerecha.addEventListener ("click",MoverDerecha);
+        botonIzquierda.addEventListener ("click",MoverIzquierda);
+
+        setInterval(MoverDerecha, 5000); // PARA QUE SE CAMBIE LA FOTO CADA 5 SEGUNDOS
+    </script> 
+
     <section id="datos">
         <img src="/images/Logo/logo2.jpg" alt="logo2" id="logo">
-        <h2 style="color: black;">Contacto</h2>
+        <h2 style="color: rgb(129, 154, 233);">Contacto</h2>
         <p>Dirección: Avda. Eva Perón 1558</p>
         <p>Teléfono: (0266)-15202020</p>
         <p>Email: ivanlik@gmail.com</p>
