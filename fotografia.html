@@ -31,70 +31,7 @@
         </nav>
     </main>
 
-    <div class="fotografia">
-        <img src="/images/Logo/logo2.jpg" alt="logo2" id="logo">
-        <h1 id="videos" class="nosotros" style="color: #3986b6;">FOTOGRAFIA PROFESIONAL</h1>
-        <h2 style="color: black;">Estamos equipados para darle la mejor calidad a tus videos, con la mejor tecnología, y un grupo de trabajo técnico especializado </h2>
-        <div class="contenedor-slider">
-            <div class="icono-izquierda">
-                <img src="/images/Flechas/left_arrow.png" alt="">
-            </div>
-            <div class="Imagenes">
-                <img name="imagenSlide" src="images/Promo/p1.jpg">       
-            </div>    
-            <div class="icono-derecha">
-                <img src="/images/flechas/right_arrow.png" alt="">
-            </div>
-
-        </div>    
-    </div>
-    <script>
-        
-        var imagenes=["images/Promo/p1.jpg",
-            "images/Promo/p2.jpg",
-            "images/Promo/p3.jpg",
-            "images/Promo/p4.jpg",
-            "images/Promo/p5.jpg",
-            "images/Promo/p6.jpg",
-            "images/Promo/p7.jpg",
-            "images/Promo/p8.jpg",
-            "images/Promo/p9.jpg",
-            "images/Promo/p10.jpg",
-        ];
-
-        var imgElement = document.querySelector('.Imagenes img');
-        
-        var contador=0;
-        function MoverDerecha()
-            {
-            contador++;
-
-            if (contador>imagenes.length-1)
-                {
-                    contador=0;
-                }
-                imgElement.src = imagenes[contador];
-            }
-
-        function MoverIzquierda()
-            {
-            contador--;
-            
-            if (contador<0)
-                {
-                    contador= imagenes.length-1;
-                }
-                imgElement.src = imagenes[contador];
-            }
-
-        var botonDerecha = document.querySelector(".icono-derecha");
-        var botonIzquierda= document.querySelector(".icono-izquierda");
-        
-        botonDerecha.addEventListener ("click",MoverDerecha);
-        botonIzquierda.addEventListener ("click",MoverIzquierda);
-
-        setInterval(MoverDerecha, 5000); // PARA QUE SE CAMBIE LA FOTO CADA 5 SEGUNDOS
-    </script>
+ 
 
 </body>
 </html>

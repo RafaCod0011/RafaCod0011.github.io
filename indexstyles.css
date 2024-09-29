@@ -317,11 +317,11 @@ input[type="submit"]:hover {
 
 
 /*----------------------------------------------------------------------------- */
+.fotografia {
+    color: #46a2db ;
+    background-color: black;
+}
 
-
-
-
-/* ESTILO PARA LA PAGINA DE FOTOS*/
  /* Estilo del Slide FOTOS*/
 
  .contenedor-slider {
@@ -330,7 +330,7 @@ input[type="submit"]:hover {
     width: 100%;
     max-width: 800px;
     margin: auto;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
     overflow: hidden;
     position: relative;
 }
