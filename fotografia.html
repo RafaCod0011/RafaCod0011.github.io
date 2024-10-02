@@ -123,7 +123,7 @@
             <p> Aqui podemos poner alguna cosita que describa mejor el servicio</p>
         </section>
 
-        <div class="row">
+        <div class="row" id="artisticas">
             <img src="images/artisticas/a1.jpg" alt="foto artistica">
             <img src="images/artisticas/a2.jpg" alt="foto artistica">
             <img src="images/artisticas/a3.jpg" alt="foto artistica">
@@ -135,8 +135,6 @@
             <img src="images/artisticas/a9.jpg" alt="foto artistica">
             <img src="images/artisticas/a10.jpg" alt="foto artistica">
             <img src="images/artisticas/a11.jpg" alt="foto artistica">
-            <img src="images/artisticas/a10.jpg" alt="foto artistica">
-            <img src="images/artisticas/a11.jpg" alt="foto artistica">
             <img src="images/artisticas/a12.jpg" alt="foto artistica">
             <img src="images/artisticas/a13.jpg" alt="foto artistica">
             <img src="images/artisticas/a14.jpg" alt="foto artistica">
@@ -144,6 +142,39 @@
             <img src="images/artisticas/a16.jpg" alt="foto artistica">
             <img src="images/artisticas/a17.jpg" alt="foto artistica">
         </div>
+
+        <script>
+            // pruebas ********************************
+            var imagenes = [
+                "images/artisticas/a1.jpg",
+                "images/artisticas/a2.jpg",
+                "images/artisticas/a3.jpg",
+                "images/artisticas/a4.jpg",
+                "images/artisticas/a5.jpg",
+                "images/artisticas/a6.jpg",
+                "images/artisticas/a7.jpg",
+                "images/artisticas/a8.jpg",
+                "images/artisticas/a9.jpg",
+                "images/artisticas/a10.jpg",
+                "images/artisticas/a11.jpg",
+                "images/artisticas/a12.jpg",
+                "images/artisticas/a13.jpg",
+                "images/artisticas/a14.jpg",
+                "images/artisticas/a15.jpg",
+                "images/artisticas/a16.jpg",
+                "images/artisticas/a17.jpg"
+            ];
+
+                function cambiarImagenes() {
+                    var imagenesArtisticas = document.querySelectorAll('#artisticas img');
+                    imagenesArtisticas.forEach(function(img) {
+                        var indice = Math.floor(Math.random() * imagenes.length);
+                        img.src = imagenes[indice];
+                    });
+                }
+        
+                setInterval(cambiarImagenes, 4000);
+        </script>
 
         <section id="datos">
             <h2 style="color: rgb(129, 154, 233);">DESPLEGÁ TU TALENTO Y RETRATÁ TU IMAGEN</h2>
