@@ -317,11 +317,9 @@ input[type="submit"]:hover {
 
 
 /*----------------------------------------------------------------------------- */
-.fotografia {
-    color: #46a2db ;
-    background-color: black;
-}
 
+
+/* ESTILO PARA LA PAGINA DE FOTOS*/
  /* Estilo del Slide FOTOS*/
 
  .contenedor-slider {
@@ -330,7 +328,7 @@ input[type="submit"]:hover {
     width: 100%;
     max-width: 800px;
     margin: auto;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     overflow: hidden;
     position: relative;
 }
@@ -360,9 +358,39 @@ input[type="submit"]:hover {
     max-width: 100%;
     display: block;
 }
+
+
+/* ------------------- FOTOS ----------- */
+
+.galleriaFotos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.row img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.row img:hover {
+    transform: scale(1.05);
+}
+
 /*------------------ FOOTER----------------------------------------------------------- */
 
-footer{;
+footer{
     background-color:  #3986b6;
     color: black
 }
