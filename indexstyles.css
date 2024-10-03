@@ -163,10 +163,12 @@ ul li a:hover {
 /* FORMATO PARA PRESENTAR 3 PRODUCTOS */
 
 section {
-    margin: 20px 0;
+    margin: 40px 0;
     padding: 20px;
-    background-color: rgb(17, 15, 15);
-    color:#ccc;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #46a2db;
+    color:white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -175,6 +177,16 @@ section {
     text-align: center;
 
 }
+#nosotros h2 {
+    color: white;
+    font-size: 40px;
+    
+}
+
+#nosotros p {
+    color:white;
+    font-size: 25px;
+}
 
 #servicios {
     display: grid;
@@ -182,23 +194,40 @@ section {
     gap: 20px;
 }
 
+#servicios h3{
+    color: #3986b6;
+    font-size: 25px;
+}
+
+#servicios p{
+    color: black;
+    font-size: 20px;
+    
+}
 .servicios-item {
     padding: 10px;
+    padding-top: 30px;
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #f9f9f9;
     text-align: center;
+    
 }
+
 .servicios-item img {
     max-width: 300px;
     object-fit: cover; 
     width: 300px;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
 }
+
 #datos {
     text-align: center;
     padding: 20px;
+    background-color: white;
+    color: black;
+    font-weight: 600
 }
 
 #logo {
@@ -283,7 +312,16 @@ label {
    font-size: 18px;
 }
 
-input[type="text"], [type="email"], select, [type="datetime-local"] {
+textarea{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    color:rgb(0, 0, 0);
+    font-size: 16px;
+    border-style: double;
+    outline: none;
+}
+
+input[type="text"], [type="email"],select,[type="option"]{
    background-color: rgb(255, 255, 255);
    border-radius: 5px;
    color:rgb(0, 0, 0);
@@ -292,7 +330,7 @@ input[type="text"], [type="email"], select, [type="datetime-local"] {
    outline: none;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, select,[type="datetime-local"]:focus {
+input[type="text"]:focus, input[type="email"]:focus, select,[type="option"]:focus {
    border-color: rgb(255, 255, 255); /* Cambia el color del borde al hacer clic */
 }
 
@@ -362,6 +400,20 @@ input[type="submit"]:hover {
 
 /* ------------------- FOTOS ----------- */
 
+#datosfotos{
+    text-align: center;
+}
+
+#datosfotos h2 {
+    color: white;
+    font-size:40px;
+}
+
+#datosfotos p {
+    color: white;
+    font-size: 25px;
+}
+
 .galleriaFotos {
     display: flex;
     flex-direction: column;
@@ -373,6 +425,7 @@ input[type="submit"]:hover {
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
 .row img {
