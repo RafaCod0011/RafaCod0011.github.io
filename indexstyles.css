@@ -356,7 +356,6 @@ input[type="submit"]:hover {
 
 /*----------------------------------------------------------------------------- */
 
-
 /* ESTILO PARA LA PAGINA DE FOTOS*/
  /* Estilo del Slide FOTOS*/
 
@@ -366,7 +365,7 @@ input[type="submit"]:hover {
     width: 100%;
     max-width: 800px;
     margin: auto;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
     overflow: hidden;
     position: relative;
 }
@@ -400,18 +399,20 @@ input[type="submit"]:hover {
 
 /* ------------------- FOTOS ----------- */
 
-#datosfotos{
+.datosfotos{
     text-align: center;
+    margin-top: 0px;
 }
 
-#datosfotos h2 {
+.datosfotos h2 {
     color: white;
     font-size:40px;
 }
 
-#datosfotos p {
+.datosfotos p {
     color: white;
     font-size: 25px;
+    text-align: center;
 }
 
 .galleriaFotos {
