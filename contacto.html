@@ -38,7 +38,7 @@
         
     </div>    
     
-    <form>
+    <form id="miFormulario" novalidate onsubmit="return validarForm()">
         <div class="formulario">
             <div class="campos">
                 <div class="form-group">
@@ -51,11 +51,16 @@
                 </div>
                 <div class="form-group">
                     <label for="mail">MAIL:</label>
-                    <input type="email" id="mail" name="email">
+                    <input type="email" id="mail" name="email" onfocus="limpiarInput(event)"><div class="contenedor-error"><span style="display:none;" id="spanErrorMail">Mail no valido</span></div>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">TELEFONO:</label>
+                    <input type="text" id="telefono" name="telf" onfocus="limpiarInput(event)"><div class="contenedor-error"><span style="display:none;" id="spanErrorTelf">Telefono no valido</span></div>
                 </div>
                 <div class="form-group">
                     <label for="sex">MOTIVO:</label>
                     <select id="sex" name="sexo">
+                        <option value="" disabled selected>Seleccione un motivo</option>
                         <option value="Presupuesto">Presupuesto</option>
                         <option value="Promocions">Promociones</option>
                         <option value="Otro">Otro</option>
@@ -65,16 +70,93 @@
                      <label for="mensajeContacto">Mensaje:</label>
                      <textarea id="mensajeContacto" name="mensajeContacto" maxlength="200"></textarea>
                 </div>
-                 
-                <div >
-                    <input type="submit" name="enviar" id="enviar">
-                </div>
-
             </div>
             <div class="imagen">
                 <img src="./images/Backstage/Back3_gris2.jpg" alt="Descripción de la imagen">
             </div>
         </div>
+        <div >
+            <input type="submit" name="enviar" id="enviar">
+        </div>
     </form>
+    
+    <div style="display:none;" id="resultado">
+        <span id="generalError" style="display:none; color:red;">Por favor, complete todos los campos requeridos.</span>
+    </div>
+
+    <script>
+    function validarForm(){
+
+    let flagError=false;
+
+    let emailElem = document.getElementById('mail');
+    let telfElem = document.getElementById('telefono');
+    let nombreElem = document.getElementById('nombre');
+    let apellidoElem = document.getElementById('apellido');
+    let mensajeElem = document.getElementById('mensajeContacto');
+
+    let email = emailElem.value;
+    let telf = telfElem.value;
+    let nombre = nombreElem.value;
+    let apellido = apellidoElem.value;
+    let mensaje = mensajeElem.value;
+
+
+    let testEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    let testTelf= /^\+?[0-9]{10,15}$/;
+
+
+    if(nombre === '' || apellido === '' || mensaje === '' || email===''|| telf===''){
+        let res= document.getElementById('resultado');
+        res.style.display = 'block';
+        document.getElementById('generalError').style.display = 'block';
+        flagError = true;
+    } else {
+        document.getElementById('generalError').style.display = 'none';
+    }
+
+    if(!testEmail.test(email)){
+        document.getElementById('spanErrorMail').style.display='block';
+        flagError=true;
+    }else {
+        document.getElementById('spanErrorMail').style.display = 'none';
+    }
+
+    if(!testTelf.test(telf)){
+        document.getElementById('spanErrorTelf').style.display='block';
+        flagError=true;
+    }else {
+        document.getElementById('spanErrorTelf').style.display = 'none';
+    }
+    console.log("flagError: ", flagError);
+
+    if(!flagError){
+        
+        let res= document.getElementById('resultado');
+        let text= document.createElement('h2');
+        text.innerHTML='Mensaje enviado correctamente.';
+        res.appendChild(text);
+        res.style.display = 'block';
+        document.getElementById('mail').value='';
+        document.getElementById('telefono').value='';
+        document.getElementById('nombre').value = '';
+        document.getElementById('apellido').value = '';
+        document.getElementById('sex').selectedIndex = 0;
+        document.getElementById('mensajeContacto').value = '';
+        console.log('hola')
+    }
+    
+
+    return false;
+}
+    function limpiarInput(e){
+        let spanError= e.target.nextSibling;
+        if (spanError && spanError.style.display === 'block') {
+        spanError.style.display = 'none';
+    }
+    document.getElementById('mail').addEventListener('input', limpiarInput);
+    document.getElementById('telefono').addEventListener('input', limpiarInput);
+}
+    </script>
 </body>
 </html>

@@ -262,10 +262,10 @@ form {
    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
    width: 800px;
    padding: 20px;
-   height: 500px;
    display: flex;
    justify-content: center;
    align-items: center;
+   flex-direction: column;
 }
 
 .formulario {
@@ -278,18 +278,30 @@ form {
    display: flex;
    flex-direction: column;
    gap: 40px;
-   color: black;   
-   /* background-color:rgb(255, 13, 13); */
-   margin-left: 80px;
+   color: black;
 }
 
 .form-group {
    display: flex;
    align-items: center;
-   justify-content: left;
+   justify-content: flex-start;
    padding: 10px;
 }
 
+#spanErrorMail,#spanErrorTelf {
+    margin-left: 10px;
+    color: red;
+    font-size: 16px;
+}
+.contenedor-error {
+    width: 100px; 
+    height: 20px; 
+  }
+
+  .error-container span {
+    display: none;
+  }
+  
 .imagen {
    display: flex;
    align-items: center;
@@ -302,8 +314,6 @@ form {
    width: 100%;
    height: auto;
 }
-
-
 
 label {
    width: 140px;
@@ -319,6 +329,7 @@ textarea{
     font-size: 16px;
     border-style: double;
     outline: none;
+    resize: none;
 }
 
 input[type="text"], [type="email"],select,[type="option"]{
@@ -335,19 +346,40 @@ input[type="text"]:focus, input[type="email"]:focus, select,[type="option"]:focu
 }
 
 input[type="submit"] {
-   width: 100%;
+   width: 250%;
    background-color: #ffffff;
    color: rgb(0, 0, 0);
    font-size: 18px;
-   border: none;
-   border-radius: 4px;
+   border: 2px solid #ccc;
+   border-radius: 10px;
    cursor: pointer;
    display: flex;
    align-items: center;
    justify-content: left;
    padding: 10px;
+   margin-top: 20px;
+}
+#generalError {
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px; 
+    text-align: center;
+  }
+#resultado{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    text-align: center;
 }
 
+#resultado h2 {
+    font-size: 24px; 
+    color: white; 
+  }
 input[type="submit"]:hover {
    background-color:#46a2db;
    color: rgb(255, 255, 255);
