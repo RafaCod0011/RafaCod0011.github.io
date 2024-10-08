@@ -474,34 +474,48 @@ input[type="submit"]:hover {
     transform: scale(1.05);
 }
 /* ------------------- ESTILO DE LA PAGINA DE VIDEOS ----------- */
-.video-grid{
-    background-color: black; /* Acá me parece bueno el fondo negro */
-
+.video-grid {
+    background-color: black;
+    padding: 20px; 
 }
+
 .seccionPrincipal {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .principal iframe {
-    width: 2000%;  
+    margin-bottom: 40px; 
+
+.principal h2 {
+    color: #3986b6; 
+    margin: 10px 0; 
+}
+
+.principal iframe {
+    width: 110%;  
+    max-width: 1200px; 
     height: 500px; 
-  }
-  
-  .seccionSecundaria {
+    border: none; 
+}
+
+.seccionSecundaria {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
     grid-gap: 15px;
     width: 90%; 
-  }
-  
-  .videochico iframe {
-    width: 100%;
-    height: 200px; 
-  }
-  
+    margin: 0 auto;
+}
 
+.videochico {
+    position: relative; 
+    overflow: hidden;
+    height: 200px;
+}
+
+.videochico img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 /*------------------ FOOTER----------------------------------------------------------- */
 
 footer{
