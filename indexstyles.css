@@ -224,7 +224,7 @@ section {
 
 #datos {
     text-align: center;
-    padding: 20px;
+    padding: 5px;
     background-color: white;
     color: black;
     font-weight: 600
@@ -235,7 +235,7 @@ section {
     margin: 0 auto; 
     max-width: 100%;
     height: auto; 
-    width: 150px; 
+    width: 70px; 
 }
 
 /* ---------------- PARA EL FORMUALRIO DE CONTACTO --------------- */
@@ -486,29 +486,38 @@ input[type="submit"]:hover {
     margin-bottom: 40px; 
 }    
 
-.principal h2 {
+.principal h2, .principal h1 {
     color: white; 
     margin: 10px 0; 
+    text-align: center;
 }
 
-.principal iframe {
+
+.principal img {
     width: 100%;  
     max-width: 1200px; 
     height: 500px; 
     border: none; 
 }
 
-.principal:hover iframe {
+.principal:hover img {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+
 .seccionSecundaria {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     grid-gap: 15px;
     width: 90%; 
     margin: 0 auto;
+    justify-items: center;
+    align-items: center;
+}
+
+.videochico {
+    position: relative;
 }
 
 .videochico img {
@@ -523,15 +532,25 @@ input[type="submit"]:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-
-.videochico {
-    position: relative;
+.videochico h2 {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
 }
 
 /*------------------ FOOTER----------------------------------------------------------- */
 
-footer{
-    background-color:  #3986b6;
-    color: black;
-    position: relative;
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.footer-columna {
+    flex: 1;
+    text-align: center;
 }
