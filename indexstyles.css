@@ -164,9 +164,9 @@ ul li a:hover {
 
 section {
     margin: 40px 0;
-    padding: 20px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: #46a2db;
     color:white;
     border-radius: 8px;
@@ -257,7 +257,7 @@ section {
 form {
    margin-top: 100px;
    margin-bottom: 100px;
-   margin-left: 150px;
+   margin-left: 300px;
    border-radius: 10px;
    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
    width: 800px;
@@ -474,10 +474,18 @@ input[type="submit"]:hover {
     transform: scale(1.05);
 }
 /* ------------------- ESTILO DE LA PAGINA DE VIDEOS ----------- */
+
+
 .video-grid {
     background-color: black;
     padding: 20px; 
+    margin: 50px;
+    margin-top: 50px;
 }
+.artistas{
+    background-color: white;
+}
+
 
 .seccionPrincipal {
     display: flex;
@@ -498,9 +506,15 @@ input[type="submit"]:hover {
     max-width: 1200px; 
     height: 500px; 
     border: none; 
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.principal:hover img {
+.principal a , .videochico a{
+   
+    padding: 0%;
+   
+}
+.principal img:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
@@ -523,19 +537,20 @@ input[type="submit"]:hover {
 .videochico img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.videochico:hover img {
+.videochico img:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+
 .videochico h2 {
-    color: white;
+    color: black;
     text-align: center;
     margin-top: 10px;
+    font-size: 20px;
 }
 
 /*------------------ FOOTER----------------------------------------------------------- */
