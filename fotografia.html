@@ -36,16 +36,10 @@
         <h1 id="videos" class="nosotros" style="color: #3986b6;">FOTOGRAFIA PROFESIONAL</h1>
         <h2 style="color: black;">Estamos equipados para brindarte la mejor calidad a tus fotos, con la mejor tecnología, y un grupo de trabajo técnico especializado</h2>
         <div class="contenedor-slider">
-            <div class="icono-izquierda">
-                <img src="/images/Flechas/left_arrow.png" alt="">
-            </div>
+            
             <div class="Imagenes">
                 <img name="imagenSlide" src="images/Promo/p1.jpg">       
             </div>    
-            <div class="icono-derecha">
-                <img src="/images/Flechas/right_arrow.png" alt="">
-            </div>
-
         </div>    
     </div>
     <script>
@@ -76,24 +70,7 @@
                 imgElement.src = imagenes[contador];
             }
 
-        function MoverIzquierda()
-            {
-            contador--;
-            
-            if (contador<0)
-                {
-                    contador= imagenes.length-1;
-                }
-                imgElement.src = imagenes[contador];
-            }
-
-        var botonDerecha = document.querySelector(".icono-derecha");
-        var botonIzquierda= document.querySelector(".icono-izquierda");
-        
-        botonDerecha.addEventListener ("click",MoverDerecha);
-        botonIzquierda.addEventListener ("click",MoverIzquierda);
-
-        setInterval(MoverDerecha, 5000); // PARA QUE SE CAMBIE LA FOTO CADA 5 SEGUNDOS
+        setInterval(MoverDerecha, 3000); // PARA QUE SE CAMBIE LA FOTO CADA x SEGUNDOS
 
     </script>
 
