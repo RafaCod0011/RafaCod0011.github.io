@@ -42,122 +42,193 @@
         <div class="formulario">
             <div class="campos">
                 <div class="form-group">
-                    <label for="nombre">NOMBRE:</label>
-                    <input type="text" id="nombre" name="nick">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" maxlength="50" onfocus="limpiarInput(event)" required>
+                    <div class="contenedor-error">
+                        <span style="display: none;" id="spanErrorApellido" class="error-message">*Máximo 50 caracteres.</span>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="apellido">APELLIDO:</label>
-                    <input type="text" id="apellido" name="subname">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" maxlength="50" onfocus="limpiarInput(event)" required>
+                    <div class="contenedor-error">
+                        <span style="display: none;" id="spanErrorNombre" class="error-message">*Máximo 50 caracteres.</span>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="mail">MAIL:</label>
-                    <input type="email" id="mail" name="email" onfocus="limpiarInput(event)"><div class="contenedor-error"><span style="display:none;" id="spanErrorMail">Mail no valido</span></div>
+                    <label for="email">Correo electrónico (opcional):</label>
+                    <input type="email" id="email" name="email" onfocus="limpiarInput(event)">
+                    <div class="contenedor-error">
+                        <span style="display: none;" id="spanErrorMail" class="error-message">*Correo no válido.</span>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="telefono">TELEFONO:</label>
-                    <input type="text" id="telefono" name="telf" onfocus="limpiarInput(event)"><div class="contenedor-error"><span style="display:none;" id="spanErrorTelf">Telefono no valido</span></div>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" id="telefono" name="telefono" onfocus="limpiarInput(event)" required>
+                    <div class="contenedor-error">
+                        <span style="display: none;" id="spanErrorTelefono" class="error-message">*Teléfono no válido.</span>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="sex">MOTIVO:</label>
-                    <select id="sex" name="sexo">
-                        <option value="" disabled selected>Seleccione un motivo</option>
-                        <option value="Presupuesto">Presupuesto</option>
-                        <option value="Promocions">Promociones</option>
-                        <option value="Otro">Otro</option>
+                    <label for="motivo">Motivo:</label>
+                    <select id="motivo" name="motivo" onfocus="limpiarInput(event)" required>
+                        <option value="">--Seleccione un motivo--</option>
+                        <option value="presupuesto">Presupuesto</option>
+                        <option value="promocion">Promoción</option>
+                        <option value="otro">Otro</option>
                     </select>
+                    <div class="contenedor-error">
+                        <span style="display: none;" id="spanErrorMotivo" class="error-message">*Seleccione un motivo.</span>
+                    </div>
                 </div>
                 <div class="form-group">
-                     <label for="mensajeContacto">Mensaje:</label>
-                     <textarea id="mensajeContacto" name="mensajeContacto" maxlength="200"></textarea>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" cols="50" onfocus="limpiarInput(event)" required></textarea>
+                    <div class="contenedor-error">
+                        <span style="display: none;" id="spanErrorMensaje" class="error-message">*El mensaje es requerido.</span>
+                    </div>
                 </div>
             </div>
             <div class="imagen">
                 <img src="./images/Backstage/Back3_gris2.jpg" alt="Descripción de la imagen">
             </div>
         </div>
-        <div >
-            <input type="submit" name="enviar" id="enviar">
+        <div class="contenedor-boton">
+            <input type="submit" name="enviar" id="enviar" value="Enviar">
         </div>
     </form>
     
-    <div style="display:none;" id="resultado">
-        <span id="generalError" style="display:none; color:red;">Por favor, complete todos los campos requeridos.</span>
-    </div>
-
-    <script>
-    function validarForm(){
-
-    let flagError=false;
-
-    let emailElem = document.getElementById('mail');
-    let telfElem = document.getElementById('telefono');
-    let nombreElem = document.getElementById('nombre');
-    let apellidoElem = document.getElementById('apellido');
-    let mensajeElem = document.getElementById('mensajeContacto');
-
-    let email = emailElem.value;
-    let telf = telfElem.value;
-    let nombre = nombreElem.value;
-    let apellido = apellidoElem.value;
-    let mensaje = mensajeElem.value;
-
-
-    let testEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    let testTelf= /^\+?[0-9]{10,15}$/;
-
-
-    if(nombre === '' || apellido === '' || mensaje === '' || email===''|| telf===''){
-        let res= document.getElementById('resultado');
-        res.style.display = 'block';
-        document.getElementById('generalError').style.display = 'block';
-        flagError = true;
-    } else {
-        document.getElementById('generalError').style.display = 'none';
-    }
-
-    if(!testEmail.test(email)){
-        document.getElementById('spanErrorMail').style.display='block';
-        flagError=true;
-    }else {
-        document.getElementById('spanErrorMail').style.display = 'none';
-    }
-
-    if(!testTelf.test(telf)){
-        document.getElementById('spanErrorTelf').style.display='block';
-        flagError=true;
-    }else {
-        document.getElementById('spanErrorTelf').style.display = 'none';
-    }
-    console.log("flagError: ", flagError);
-
-    if(!flagError){
-        
-        let res= document.getElementById('resultado');
-        let text= document.createElement('h2');
-        text.innerHTML='Mensaje enviado correctamente.';
-        res.appendChild(text);
-        res.style.display = 'block';
-        document.getElementById('mail').value='';
-        document.getElementById('telefono').value='';
-        document.getElementById('nombre').value = '';
-        document.getElementById('apellido').value = '';
-        document.getElementById('sex').selectedIndex = 0;
-        document.getElementById('mensajeContacto').value = '';
-        console.log('hola')
-    }
+    <ul style="display: none;" id="Mensaje"></ul>
     
-
-    return false;
-}
-    function limpiarInput(e){
-        let spanError= e.target.nextSibling;
-        if (spanError && spanError.style.display === 'block') {
-        spanError.style.display = 'none';
-    }
-    document.getElementById('mail').addEventListener('input', limpiarInput);
-    document.getElementById('telefono').addEventListener('input', limpiarInput);
-}
+    <script>
+        function validarForm() {
+            let flagError = false;
+    
+            let apellidoElem = document.getElementById('apellido');
+            let nombreElem = document.getElementById('nombre');
+            let emailElem = document.getElementById('email');
+            let telefonoElem = document.getElementById('telefono');
+            let motivoElem = document.getElementById('motivo');
+            let mensajeElem = document.getElementById('mensaje');
+            let Mensaje = document.getElementById('Mensaje');
+    
+            
+            Mensaje.style.display = 'none';
+            apellidoElem.classList.remove('error');
+            nombreElem.classList.remove('error');
+            emailElem.classList.remove('error');
+            telefonoElem.classList.remove('error');
+            motivoElem.classList.remove('error');
+            mensajeElem.classList.remove('error');
+    
+            document.getElementById('spanErrorApellido').style.display = 'none';
+            document.getElementById('spanErrorNombre').style.display = 'none';
+            document.getElementById('spanErrorMail').style.display = 'none';
+            document.getElementById('spanErrorTelefono').style.display = 'none';
+            document.getElementById('spanErrorMotivo').style.display = 'none';
+            document.getElementById('spanErrorMensaje').style.display = 'none';
+    
+            
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            
+            
+            var telefonoRegex = /^\+?\d{1,4}?\s?\d{1,3}?\s?\d{3,}$/;
+    
+            
+            if (apellidoElem.value === '' || apellidoElem.value.length > 50) {
+                document.getElementById('spanErrorApellido').style.display = 'block';
+                apellidoElem.classList.add('error');
+                flagError = true;
+            }
+    
+            if (nombreElem.value === '' || nombreElem.value.length > 50) {
+                document.getElementById('spanErrorNombre').style.display = 'block';
+                nombreElem.classList.add('error');
+                flagError = true;
+            }
+    
+            if (emailElem.value !== '' && !emailRegex.test(emailElem.value)) {
+                document.getElementById('spanErrorMail').style.display = 'block';
+                emailElem.classList.add('error');
+                flagError = true;
+            }
+    
+            if (!telefonoRegex.test(telefonoElem.value)) {
+                document.getElementById('spanErrorTelefono').style.display = 'block';
+                telefonoElem.classList.add('error');
+                flagError = true;
+            }
+    
+            if (motivoElem.value === '') {
+                document.getElementById('spanErrorMotivo').style.display = 'block';
+                motivoElem.classList.add('error');
+                flagError = true;
+            }
+    
+            if (mensajeElem.value === '') {
+                document.getElementById('spanErrorMensaje').style.display = 'block';
+                mensajeElem.classList.add('error');
+                flagError = true;
+            }
+    
+            if (flagError) {
+                return false; 
+            }
+    
+            
+            Mensaje.innerHTML = '';
+            Mensaje.style.display = 'block';
+    
+            let titulo = document.createElement('li');
+            titulo.innerHTML = '<strong>Datos Ingresados:</strong>';
+            Mensaje.appendChild(titulo);
+            
+            let apellidoDato = document.createElement('li');
+            apellidoDato.innerHTML = `<strong>Apellido:</strong> ${apellidoElem.value}`;
+            Mensaje.appendChild(apellidoDato);
+            
+            let nombreDato = document.createElement('li');
+            nombreDato.innerHTML = `<strong>Nombre:</strong> ${nombreElem.value}`;
+            Mensaje.appendChild(nombreDato);
+            
+            let correoDato = document.createElement('li');
+            correoDato.innerHTML = `<strong>Correo Electrónico:</strong> ${emailElem.value !== '' ? emailElem.value : 'No ingreso'}`;
+            Mensaje.appendChild(correoDato);
+            
+            let telefonoDato = document.createElement('li');
+            telefonoDato.innerHTML = `<strong>Teléfono:</strong> ${telefonoElem.value}`;
+            Mensaje.appendChild(telefonoDato);
+            
+            let motivoDato = document.createElement('li');
+            motivoDato.innerHTML = `<strong>Motivo:</strong> ${motivoElem.value}`;
+            Mensaje.appendChild(motivoDato);
+            
+            let mensajeDato = document.createElement('li');
+            mensajeDato.innerHTML = `<strong>Mensaje:</strong> ${mensajeElem.value}`;
+            Mensaje.appendChild(mensajeDato);
+    
+            
+            apellidoElem.value = '';
+            nombreElem.value = '';
+            emailElem.value = '';
+            telefonoElem.value = '';
+            motivoElem.value = '';
+            mensajeElem.value = '';
+    
+            return false; 
+        }
+    
+        function limpiarInput(e) {
+            let spanError = e.target.nextElementSibling.querySelector('span');
+            if (spanError && spanError.style.display === 'block') {
+                spanError.style.display = 'none';
+                e.target.classList.remove('error');
+            }
+        }
     </script>
+
+
+
 </body>
 <footer class="footer">
     <div class="footer-columna izquierda">
